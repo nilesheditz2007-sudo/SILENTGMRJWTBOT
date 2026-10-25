@@ -1,4 +1,4 @@
-# (OLFFH4XAPI) Thank you from me to the haters
+7# (OLFFH4XAPI) Thank you from me to the haters
 import os
 import json
 import aiohttp
@@ -27,17 +27,17 @@ from telegram.ext import (
 from telegram.constants import ParseMode
 from telegram.error import TelegramError, Forbidden, BadRequest
 
-# Environment Variable Loading
+# --- Configuration ---
 from dotenv import load_dotenv
 
-# --- Configuration ---
+# Environment variables optional
 load_dotenv()
 
-# Essential: Get Bot Token
-TOKEN = os.getenv('8961513305:AAEgeXPVpqmUeCFTytxXr5L6POwb8waxqaE') # Prefer .env
-if not TOKEN or TOKEN == "8961513305:AAEgeXPVpqmUeCFTytxXr5L6POwb8waxqaE": # Check if token is missing or placeholder
-    # !!! Replace with your actual bot token if not using .env !!!
-    TOKEN = "8961513305:AAEgeXPVpqmUeCFTytxXr5L6POwb8waxqaE" # FALLBACK - Highly recommended to use .env
+# Set your actual Telegram bot token here
+TOKEN = "8961513305:AAGetDdhe-iqYUcDaOuRtyCg-c0qKs9qkFg"
+
+if not TOKEN or ":" not in TOKEN:
+    raise RuntimeError("Please set a valid Telegram bot token.")
 
 # Optional: API Configuration
 API_BASE_URL = os.getenv('JWT_API_URL', 'https://silent-jwt-ob54-api.vercel.app/token')
@@ -69,6 +69,7 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
+
 # Reduce log noise from libraries
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("telegram.vendor.ptb_urllib3.urllib3").setLevel(logging.WARNING)
