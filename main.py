@@ -40,7 +40,7 @@ if not TOKEN or ":" not in TOKEN:
     raise RuntimeError("Please set a valid Telegram bot token.")
 
 # Optional: API Configuration
-API_BASE_URL = os.getenv('JWT_API_URL', 'https://silent-jwt-ob54-api.vercel.app/token')
+API_BASE_URL = os.getenv('JWT_API_URL', 'https://jwt2-tg2y.onrender.com/token')
 API_KEY = os.getenv('JWT_API_KEY', 'Nilesh')
 
 # Optional: Bot Settings
@@ -50,7 +50,7 @@ ADMIN_ID = int(os.getenv('ADMIN_ID', 8739779304)) # Default to 0 (disabled) if n
 if ADMIN_ID == 8739779304:
     print("WARNING: ADMIN_ID environment variable is not set, invalid, or 0. Admin commands (/vip, /broadcast) and error forwarding will be disabled.")
 MAX_CONCURRENT_REQUESTS = int(os.getenv('MAX_CONCURRENT_REQUESTS', 30)) # Limit concurrent API requests
-ADMIN_CONTACT_LINK = os.getenv('ADMIN_CONTACT_LINK', 'https://t.me/SILENT_CODEX') # Default admin contact link
+ADMIN_CONTACT_LINK = os.getenv('ADMIN_CONTACT_LINK', 'https://t.me/silent_gamer_10') # Default admin contact link
 AUTO_PROCESS_CHECK_INTERVAL = int(os.getenv('AUTO_PROCESS_CHECK_INTERVAL', 60)) # Seconds between scheduler checks (min 60 recommended)
 
 # --- File Paths ---
