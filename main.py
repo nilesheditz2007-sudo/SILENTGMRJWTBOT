@@ -34,7 +34,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Set your actual Telegram bot token here
-TOKEN = "8961513305:AAGetDdhe-iqYUcDaOuRtyCg-c0qKs9qkFg"
+TOKEN = "8882130132:AAFWF7-1eOutULEbMljnm9iwgIjNW0LMpDc"
 
 if not TOKEN or ":" not in TOKEN:
     raise RuntimeError("Please set a valid Telegram bot token.")
